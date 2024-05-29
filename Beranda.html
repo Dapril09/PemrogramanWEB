@@ -4,112 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CookieRookie</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4fcf3;
-        }
-        .header {
-            background: linear-gradient(90deg,#A1DD70 15%, #9DDE8B 70%, #BFF6C3 100%);
-            color: white;
-            padding: 20px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .header .logo {
-            font-size: 30px;
-            font-weight: bold;
-        }
-        .header nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        .header nav a:hover {
-            text-decoration: underline;
-        }
-        .header .search-container {
-            display: flex;
-            align-items: center;
-        }
-        .header .search-container input[type="text"] {
-            padding: 5px;
-            border: none;
-            border-radius: 3px;
-        }
-        .header .search-container button {
-            padding: 5px 10px;
-            border: none;
-            background-color: #f9f9f9;
-            color: #054225;
-            border-radius: 3px;
-            margin-left: 5px;
-            cursor: pointer;
-        }
-        .header .search-container button:hover {
-            background-color: #e1e1e1;
-        }
-        .content {
-            padding: 20px;
-        }
-        .advertisement {
-            border: 1px solid #ccc;
-            padding: 50px;
-            margin: 20px 0;
-            background-color: #f9f9f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .featured-recipes {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        .recipe-card {
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            width: 300px;
-            overflow: hidden;
-            transition: transform 0.2s;
-        }
-        .recipe-card:hover {
-            transform: scale(1.05);
-        }
-        .recipe-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .recipe-card .details {
-            padding: 15px;
-            text-align: center;
-        }
-        .recipe-card .details h3 {
-            margin: 0;
-            font-size: 20px;
-        }
-        .recipe-card .details p {
-            margin: 10px 0;
-            color: #777;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="header">
-        <div class="logo">CookieRookie</div>
+        <a href="Beranda.html" class="logo">CookieRookie</a>
         <nav>
-            <a href="#">Resep Masakan</a>
-            <a href="#">Bahan Makanan</a>
-            <a href="#">Kuliner</a>
-            <a href="#">Nutrisi</a>
-            <a href="#">Tips</a>
-            <a href="#">Event & Promosi</a>
+            <a href="Resep_Masakan.html">Resep Masakan</a>
+            <a href="Bahan_Makanan.html">Bahan Makanan</a>
+            <a href="Kuliner.html">Kuliner</a>
+            <a href="Nutrisi.html">Nutrisi</a>
         </nav>
         <div class="search-container">
             <input type="text" placeholder="Cari Resep dan Chef CookieRookie">
