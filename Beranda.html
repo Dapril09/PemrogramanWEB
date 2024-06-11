@@ -4,7 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CookieRookie</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4fcf3;
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #A1DD70 15%, #9DDE8B 70%, #BFF6C3 100%);
+            color: white;
+            padding: 20px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+
+        .header nav a:hover {
+            text-decoration: underline;
+        }
+
+        .header .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .search-container input[type="text"] {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            width: 200px;
+        }
+
+        .header .search-container button {
+            padding: 8px 12px;
+            border: none;
+            background-color: #f9f9f9;
+            color: #054225;
+            border-radius: 5px;
+            margin-left: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .header .search-container button:hover {
+            background-color: #e1e1e1;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .advertisement {
+            border: 1px solid #ccc;
+            padding: 50px;
+            margin: 20px 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .featured-recipes {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .recipe-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .recipe-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .recipe-card .details {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .recipe-card .details h3 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .recipe-card .details p {
+            margin: 10px 0;
+            color: #777;
+        }
+
+        .story-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .story-card {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .story-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .story-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            background-color: #054225;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <div class="header">
@@ -27,73 +192,88 @@
                 <p>Advertisement</p>
             </div>
         </div>
-        <div class="featured-recipes">
-            <div class="recipe-card">
-                <iframe width="300" height="200" src="https://www.youtube.com/embed/uZvWZzy8LyY?si=mX9ILrEC3p8hv9LS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div class="details">
-                    <h3>Resep 1</h3>
-                    <p>Deskripsi singkat tentang resep 1.</p>
-                </div>
-            </div>
-            <div class="recipe-card">
-                <iframe width="300" height="200" src="https://www.youtube.com/embed/Hnlm2sWnOVo?si=BgNF2SzLFfmfLxod" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div class="details">
-                    <h3>Resep 2</h3>
-                    <p>Deskripsi singkat tentang resep 2.</p>
-                </div>
-            </div>
-            <div class="recipe-card">
-                <iframe width="300" height="200" src="https://www.youtube.com/embed/5VI2DRgsXdw?si=imxA0e1m8QvdxK-G" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div class="details">
-                    <h3>Resep 3</h3>
-                    <p>Deskripsi singkat tentang resep 3.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <h2>Favorit Sobat CookieRookie, nih!</h2>
-        <div class="featured-recipes">
-            <div class="recipe-card">
-                <img src="C:\Users\user\Documents\Project_WEB\PemrogramanWEB\Nasi Goreng.jpg" alt="Nasi Goreng">
-                <div class="details">
-                    <p>Resep Nasi Goreng</p>
-                </div>
-            </div>
-            <div class="recipe-card">
-                <img src="C:\Users\user\Documents\Project_WEB\PemrogramanWEB\Cheeseburger.jpg" alt="Cheeseburger">
-                <div class="details">
-                    <p>Resep Cheese Burger</p>
-                </div>
-            </div>
-            <div class="recipe-card">
-                <img src="C:\Users\user\Documents\Project_WEB\PemrogramanWEB\Tahu Walik.jpg" alt="Tahu Walik">
-                <div class="details">
-                    <p>Resep Tahu Walik</p>
-                </div>
-            </div>
-        </div>
         <h2>CookieRookie Story</h2>
         <div class="story-section">
             <div class="story-card">
-                <img src="C:\Users\user\Documents\Project_WEB\PemrogramanWEB\Puding susu Oreo.jpg" alt="Story 1">
+                <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Puding%20susu%20Oreo.jpg?updatedAt=1717498512423" alt="Story 1">
             </div>
             <div class="story-card">
-                <img src="C:\Users\user\Documents\Project_WEB\PemrogramanWEB\Tahu Tempe Kecap.jpg" alt="Story 2">
+                <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Tahu%20Tempe%20Kecap.jpg?updatedAt=1717498512161" alt="Story 2">
             </div>
             <div class="story-card">
-                <img src="C:\Users\user\Documents\Project_WEB\PemrogramanWEB\topookki.webp" alt="Story 3">
+                <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/topookki.webp?updatedAt=1717498512210" alt="Story 3">
             </div>
             <div class="story-card">
-                <img src="C:\Users\user\Documents\Project_WEB\PemrogramanWEB\Ayam geprek.jpg" alt="Story 4">
+                <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Ayam%20geprek.jpg?updatedAt=1717498512296" alt="ayam geprek">
             </div>
             <div class="story-card">
-                <img src="C:\Users\user\Documents\Project_WEB\PemrogramanWEB\Prakadel Jagung.jpg" alt="Story 5">
+                <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Prakadel%20Jagung.jpg?updatedAt=1717498512164" alt="Story 5">
             </div>
+        </div>
+    </div>
+</div>
+<h2>Favorit Sobat CookieRookie, nih!</h2>
+<div class="featured-recipes">
+    <div class="recipe-card">
+        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Nasi%20Goreng.jpg?updatedAt=1717498512204" alt="Nasi Goreng">
+        <div class="details">
+            <p>Resep Nasi Goreng</p>
+        </div>
+    </div>
+    <div class="recipe-card">
+        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Cheeseburger.jpg?updatedAt=1717498512166" alt="Cheeseburger">
+        <div class="details">
+            <p>Resep Cheese Burger</p>
+        </div>
+    </div>
+    <div class="recipe-card">
+        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Tahu%20Walik.jpg?updatedAt=1717498512300" alt="Tahu Walik">
+        <div class="details">
+            <p>Resep Tahu Walik</p>
+        </div>
+    </div>
+</div>
+<h2>Menu CookieRookie Hari Ini</h2>
+ <div class="featured-recipes">
+        <div class="recipe-card">
+            <iframe width="200" height="150" src="https://www.youtube.com/embed/uZvWZzy8LyY?si=mX9ILrEC3p8hv9LS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="details">
+                <h3>Resep 1</h3>
+                <p>Deskripsi singkat tentang resep 1.</p>
+            </div>
+        </div>
+        <div class="recipe-card">
+            <iframe width="200" height="150" src="https://www.youtube.com/embed/Hnlm2sWnOVo?si=BgNF2SzLFfmfLxod" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="details">
+                <h3>Resep 2</h3>
+                <p>Deskripsi singkat tentang resep 2.</p>
+            </div>
+        </div>
+        <div class="recipe-card">
+            <iframe width="200" height="150" src="https://www.youtube.com/embed/5VI2DRgsXdw?si=imxA0e1m8QvdxK-G" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="details">
+                <h3>Resep 3</h3>
+                <p>Deskripsi singkat tentang resep 3.</p>
+            </div>
+        </div>
+        <div class="recipe-card">
+            <iframe width="200" height="150" src="https://www.youtube.com/embed/XYev1tljzUE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="details">
+                <h3>Resep 4</h3>
+                <p>Deskripsi singkat tentang resep 4.</p>
+            </div>
+        </div>
+        <div class="recipe-card">
+            <iframe width="200" height="150" src="https://www.youtube.com/embed/s4qY20mK4Nw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="details">
+                <h3>Resep 4</h3>
+                <p>Deskripsi singkat tentang resep 4.</p>
+            </div>
+        </div>    
         </div>
     </div>
     <div class="footer">
         <p>&copy; 2024 CookieRookie. All rights reserved.</p>
     </div>
-    
 </body>
 </html>
