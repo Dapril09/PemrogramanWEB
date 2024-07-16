@@ -1,0 +1,299 @@
+<?php
+// Buat koneksi ke database
+$conn = mysqli_connect("localhost", "root", "", "webmakanan");
+
+// Cek apakah koneksi berhasil
+if (!$conn) {
+    die("Koneksi gagal: " . mysqli_connect_error());
+}
+
+// Mulai sesi
+session_start();
+
+// Cek apakah 'user_id' ada di URL dan tidak kosong
+if (isset($_GET['user_id']) && !empty($_GET['user_id'])) {
+    $user_id = mysqli_real_escape_string($conn, $_GET['user_id']); // Pastikan untuk mengamankan nilai input
+
+    // Query yang benar untuk mengambil data pengguna
+    $query = "SELECT * FROM Login WHERE Username='$user_id'";
+    $result = mysqli_query($conn, $query);
+
+    if ($result) {
+        $mhs = mysqli_fetch_assoc($result);
+        $username = $mhs["Username"];
+    } else {
+        echo "Error: " . $query . "<br>" . mysqli_error($conn);
+    }
+} else {
+    echo "User ID tidak ditemukan di URL atau kosong.";
+}
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Playwrite+NO:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Makanan | Resep Makanan</title>
+    <link rel="stylesheet" href="style_resep.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="headerbar">
+                <div class="akun">
+                    <ul>
+                        <a href="">
+                            <li>
+                                <i class="fa-solid fa-house-chimney"></i>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li>
+                                <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon1"></i>
+                            </li>
+                        </a>
+                        <div class="search" id="searchinput1">
+                            <input type="search">
+                            <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                        </div>
+                        <a href="">
+                            <li>
+                                <i class="fa-solid fa-user" id="user-mb"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            <div class="nav">
+                    <ul>
+                        <a href="resep2.php?user_id=<?php echo $user_id; ?>">
+                            <li>Resep</li>
+                        </a>
+                        <a href="bahan2.php?user_id=<?php echo $user_id; ?>">
+                            <li>Bahan</li>
+                        </a>
+                        <a href="nutrisi2.php?user_id=<?php echo $user_id; ?>">
+                            <li>Nutrisi</li>
+                        </a>
+                        <a href="unggah_resep.php?user_id=<?php echo $user_id; ?>">
+                            <li>Unggah Resep</li>
+                        </a>
+                        <a href="index2.php #about">
+                            <li>About Us</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo">
+                <a href="index2.php?user_id=<?php echo $user_id; ?>">Cookie<span>Rookie.</span></a>
+            </div>
+            <div class="bar">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark" id="hdcross"></i>
+            </div>
+            <div class="nav">
+                <ul>
+                    <a href="resep2.php?user_id=<?php echo $user_id; ?>">
+                        <li>Resep</li>
+                    </a>
+                    <a href="bahan2.php?user_id=<?php echo $user_id; ?>">
+                        <li>Bahan</li>
+                    </a>
+                    <a href="nutrisi2.php?user_id=<?php echo $user_id; ?>">
+                        <li>Nutrisi</li>
+                    </a>
+                    <a href="unggah_resep.php?user_id=<?php echo $user_id; ?>">
+                        <li>Unggah Resep</li>
+                    </a>
+                    <a href="index2.php #about">
+                        <li>About Us</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="akun">
+                <ul>
+                    <a href="index.html">
+                        <li>
+                            <i class="fa-solid fa-house"></i>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon2"></i>
+                        </li>
+                    </a>
+                    <div class="search" id="searchinput2">
+                        <input type="search">
+                        <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                    </div>
+                    <a href="login.php">
+                        <li>
+                            <i class="fa-solid fa-user" id="user-lap"></i>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main id="home" class="head-recipes">
+        <div class="main-slide">
+            <div>
+                <h1><span>Hi!</span> Choose your favorite<span> Food</span> Now, It's All Here.</h1>
+                <p>Apa yang ingin Kamu masak hari ini?</p>
+            </div>
+            <div>
+                <img src="resep_header.png" alt="">
+            </div>
+        </div>
+        <section id="recipes" class="grid">
+            <div class="recipe">
+                <a href="resep_makanan.html?id=gulai">
+                    <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/gulai.jpg?updatedAt=1720661904915" alt="Gulai Kentang Udang Pedas" loading="lazy">
+                    <h3>Gulai Kentang Udang Pedas</h3>
+                </a>
+            </div>
+            <div class="recipe">
+                <a href="resep_makanan.html?id=soto">
+                    <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/soto.jpeg?updatedAt=1720661904627" alt="Soto Ayam" loading="lazy">
+                    <h3>Soto Ayam</h3>
+                </a>
+            </div>
+            <div class="recipe">
+                <a href="resep_makanan.html?id=rendang">
+                    <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/rendang.jpeg?updatedAt=1720661904877" alt="Rendang Daging" loading="lazy">
+                    <h3>Rendang Daging</h3>
+                </a>
+            </div>
+            <div class="recipe">
+                <a href="resep_makanan.html?id=nasigoreng">
+                    <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/nasigoreng.jpeg?updatedAt=1720661904848" alt="Nasi Goreng" loading="lazy">
+                    <h3>Nasi Goreng</h3>
+                </a>
+            </div>
+            <div class="recipe">
+                <a href="resep_makanan.html?id=mie">
+                    <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/mie.jpeg?updatedAt=1720661904686" alt="Mie Goreng" loading="lazy">
+                    <h3>Mie Goreng</h3>
+                </a>
+            </div>
+            <div class="recipe">
+                <a href="resep_makanan.html?id=ayambakar">
+                    <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/ayambakar.jpeg?updatedAt=1720661904858" alt="Ayam Bakar" loading="lazy">
+                    <h3>Ayam Bakar</h3>
+                </a>
+            </div>
+            <div class="recipe">
+                <a href="resep_makanan.html?id=pecel">
+                    <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/pecel.jpeg?updatedAt=1720661904978" alt="Pecel" loading="lazy">
+                    <h3>Pecel</h3>
+                </a>
+            </div>
+            <div class="recipe">
+                <a href="resep_makanan.html?id=gadogado">
+                    <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/gadogado.jpeg?updatedAt=1720661904606" alt="Gado-Gado" loading="lazy">
+                    <h3>Gado-Gado</h3>
+                </a>
+            </div>
+            <div class="recipe">
+                <a href="resep_makanan.html?id=bakso">
+                    <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/bakso.jpeg?updatedAt=1720661904626" alt="Bakso" loading="lazy">
+                    <h3>Bakso</h3>
+                </a>
+            </div>
+            <div class="recipe">
+                <a href="resep_makanan.html?id=sate">
+                    <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/sate.jpeg?updatedAt=1720661908314" alt="Sate" loading="lazy">
+                    <h3>Sate</h3>
+                </a>
+            </div>
+            <!-- Tambahkan resep lainnya dengan cara yang sama -->
+        </section>
+    </main>
+    <footer>
+        <div class="footer_main">
+            <div class="footer_tag">
+                <h2>Location</h2>
+                <p>Kedung Mundu</p>
+                <p>Semarang</p>
+                <p>Jawa Tengah</p>
+                <p>Indonesia</p>
+            </div>
+            <div class="footer_tag">
+                <h2>Quick Link</h2>
+                <p>Logo</p>
+                <p>Resep</p>
+                <p>Bahan</p>
+                <p>Kuliner</p>
+                <p>Nutrisi</p>
+                <p>About Us</p>
+            </div>
+            <div class="footer_tag">
+                <h2>Contact</h2>
+                <p>+62 896-3056-1413</p>
+                <p>+62 812-2704-8289</p>
+                <p>dhewiaprilliana@gmail.com</p>
+                <p>indawatilatif@gmail.com</p>
+                <p>auraamylia7@gmail.com</p>
+                <p>elsanadiyah24@gmail.com</p>
+            </div>
+            <div class="footer_tag">
+                <h2>Our Service</h2>
+                <p>various cooking menus</p>
+                <p>guaranteed food</p>
+                <p>24 x 7 Service</p>
+            </div>
+            <div class="footer_tag">
+                <h2>Follows</h2>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+        <p class="end">&copy; 2024 - Design by<span><i class="fa-solid fa-face-grin"></i> Project Design Website Food</span></p>
+    </footer>
+
+    <script>
+        const searchicon1 = document.querySelector('#searchicon1');
+        const srchicon1 = document.querySelector('#srchicon1');
+        const search1 = document.querySelector('#searchinput1');
+
+        searchicon1.addEventListener('click', function(){
+            search1.style.display = 'flex';
+            searchicon1.style.display = 'none';
+        })
+
+        const searchicon2 = document.querySelector('#searchicon2');
+        const srchicon2 = document.querySelector('#srchicon2');
+        const search2 = document.querySelector('#searchinput2');
+
+        searchicon2.addEventListener('click', function(){
+            search2.style.display = 'flex';
+            searchicon2.style.display = 'none';
+        })
+
+        const bar = document.querySelector('.fa-bars');
+        const cross = document.querySelector('#hdcross');
+        const headerbar = document.querySelector('.headerbar');
+
+        bar.addEventListener('click', function(){
+            setTimeout(()=>{
+                cross.style.display='block';
+            }, 200);
+            headerbar.style.right='0%';
+        })
+
+        cross.addEventListener('click', function(){
+            cross.style.display = 'none'
+            headerbar.style.right = '-100%';
+        })
+    </script>
+</body>
+
+</html>

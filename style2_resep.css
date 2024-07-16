@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.headerbar{
+    display: none;
+}
+
+.searchicon{
+    display: block;
+}
+
+.logo a{
+    width: 150px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo a span{
+    font-family: "MuseoModerno", sans-serif;
+    color: #FE7A36;
+}
+
+.bar{
+    display: none;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 7vw;
+    background-color: #e0fbe2;
+    border-bottom: 2px solid #9DDE8B;
+    box-shadow: 0 2px 20px #40A578;
+}
+
+.header ul{
+    display: flex;
+    align-items: center;
+}
+
+.header ul li:hover{
+    color: #40A578;
+}
+
+.nav ul li{
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+.akun{
+    flex:0.1;
+}
+
+.akun ul{
+    display: flex;
+    justify-content: end;
+}
+
+.akun ul li{
+    padding: 0 15px;
+    font-size: 20px;
+}
+
+.bar i:hover{
+    color: #40A578;
+}
+
+.search{
+    display: none;
+    width: 200px;
+    justify-content: center;
+}
+
+.search input{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+
+.srchicon{
+    background-color: #B0EBB4;
+    display: block;
+    padding: 4px 5px;
+    cursor: pointer;
+}
+
+/* Main content */
+main {
+    padding: 20px;
+}
+
+.recipe-detail {
+    text-align: center;
+}
+
+.recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.recipe-image {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 50px;
+    /* Ubah ukuran gambar sesuai kebutuhan */
+}
+
+.recipe-image img {
+    width: 25%;
+    height: auto;
+}
+
+.recipe-details {
+    max-width: 300px;
+    /* Sesuaikan lebar detail resep */
+    margin-top: 20px;
+    text-align: left;
+}
+
+.recipe-details h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.recipe-details p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/*Footer*/
+
+footer{
+    width: 100%;
+    padding: 30px 0 0 20px;
+    background: #B0EBB4;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+footer .footer_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+footer .footer_main .footer_tag{
+    text-align: center;
+}
+
+footer .footer_main .footer_tag h2{
+    color: #000;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+footer .footer_main .footer_tag p{
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+footer .footer_main .footer_tag i{
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+footer .footer_main .footer_tag i:hover{
+    color: #FE7A36;
+}
+
+footer .end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+footer .end span{
+    color: #FE7A36;
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 768px){
+    .header .nav, .header .akun{
+        display: none;
+    }
+    .search{
+        width: 60vw;
+    }
+    .bar{
+        display: block;
+        cursor: pointer;
+    }
+    .headerbar{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        bottom: 0;
+        right: -100%;
+        transition: all 0.5s;
+        background-color: #e0fbe2;
+    }
+    .headerbar .akun, .headerbar .nav{
+        display: block;
+        font-size: 18px;
+    }
+    .bar .fa-xmark{
+        display: none;
+        top: 20px;
+        right: 5w;
+        position: absolute;
+        font-size: 25px;
+    }
+    .headerbar .nav ul{
+        flex-direction: column;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .headerbar .nav li{
+        width: 96vw;
+        margin: 10px 0;
+        padding: 15px 30px;
+        box-shadow: 0 2px 15px #B0EBB4;
+        font-size: 15px;
+        margin-top: 5px;
+    }
+    .headerbar .akun{
+        line-height: 40px;
+        margin-top: 60px;
+        background-color: #9DDE8B;
+        padding: 15px;
+    }
+    .headerbar .akun ul{
+        justify-content: space-between
+    }
+}

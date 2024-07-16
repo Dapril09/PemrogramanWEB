@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+body {
+    background-color: #E0F7EC; /* Light green background */
+}
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #40A578; /* Dark green border */
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #40A578; /* Dark green text */
+}
+
+.header p {
+    font-size: 18px;
+    color: #FFA726; /* Orange text */
+}
+
+.dish-image {
+    max-width: 100px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #40A578; /* Dark green background */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #339966; /* Darker green on hover */
+}
+
+.bahan-entry, .langkah-entry {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.bahan-entry input, .langkah-entry input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.langkah-entry input[type="file"] {
+    width: 30%;
+    margin-right: 10px;
+}
+
+button[type="button"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #F44336; /* Red background */
+    color: #fff;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="button"]:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
