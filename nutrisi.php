@@ -109,7 +109,7 @@
 
     <main>
         <section id="Nutrisi" class="Nutrisi-section">
-            <h2>Penuhi<span> Nutrisimu,</span> dengan Makan Makanan yang Sehat!</h2>
+            <h2>Penuhi<span> Nutrisimu,</span> dengan Makan Makanan yang Sehat!!</h2>
             <p class="intro-text">Kumpulan seputar info nutrisi dan kesehatan dari CookieRookie yang dirangkum untuk memenuhi kebutuhan gizi harianmu</p>
             <div class="recipe-card-container">
                 <div class="recipe-card">

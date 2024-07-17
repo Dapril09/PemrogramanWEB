@@ -6,7 +6,7 @@
     list-style: none;
     text-decoration: none;
     color: black;
-    font-family: 'Poppins', 'sans-serif';
+    font-family:'' 'Poppins', 'sans-serif';
 }
 
 .headerbar{
@@ -302,3 +302,4 @@ footer .end span{
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
