@@ -44,7 +44,7 @@
                         <a href="bahan.php">
                             <li>Bahan</li>
                         </a>
-                        <a href="nutrisi.html">
+                        <a href="nutrisi.php">
                             <li>Nutrisi</li>
                         </a>
                         <a href="login.php">
@@ -71,7 +71,7 @@
                     <a href="bahan.php">
                         <li>Bahan</li>
                     </a>
-                    <a href="nutrisi.html">
+                    <a href="nutrisi.php">
                         <li>Nutrisi</li>
                     </a>
                     <a href="login.php">

@@ -153,13 +153,16 @@ if (isset($_GET['user_id']) && !empty($_GET['user_id'])) {
             </div>
         </div>
 
+        <div class="head-materials">
+            <div>
+                <h2>Pilih Bahan Masakan yang Kamu Punya</h2>
+                <p>Tidak perlu bingung dan khawatir lagi mau masak. Tinggal cari bahannya dan dapatkan inspirasi resepnya!</p>
+            </div>
+        </div>
+
         <div class="materials-list-container">
             <button class="scroll-button left"><i class="fa-solid fa-chevron-left"></i></button>
             <div class="materials-list">
-                <div>
-                    <h2>Pilih Bahan Masakan yang Kamu Punya</h2>
-                    <p>Tidak perlu bingung dan khawatir lagi mau masak. Tinggal cari bahannya dan dapatkan inspirasi resepnya!</p>
-                </div>
                 <div class="list">
                     <div>
                         <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/list1.png?updatedAt=1720620384247" alt="material list">
@@ -186,7 +189,7 @@ if (isset($_GET['user_id']) && !empty($_GET['user_id'])) {
                 </div>
                 <!-- Tambahkan lebih banyak item jika diperlukan -->
             </div>
-            <button class="scroll-button right"><i class="fa-solid fa-chevron-right"></i></button>
+            <a href="bahan.php"><button class="scroll-button right"><i class="fa-solid fa-chevron-right"></i></button></a>
         </div>
         
         <div class="home2">
@@ -197,7 +200,7 @@ if (isset($_GET['user_id']) && !empty($_GET['user_id'])) {
                 <div>
                     <h2>Confused about your favorite food?</h2>
                     <p>Temukan inspirasi kuliner favoritmu di sini. Kami siap membantu menjawab kebingunganmu dalam memilih makanan yang terbaik! Atau Kamu bisa memiliki resep masakan sendiri untuk dijadikan inspirasi semua orang, dengan cukup klik tombol dibawah ini!</p>
-                    <button class="btn_green">Tambah Menu</button>
+                    <a href="login.php"><button class="btn_green">Tambah Menu</button></a>
                 </div>
             </div>
         </div>
@@ -210,21 +213,27 @@ if (isset($_GET['user_id']) && !empty($_GET['user_id'])) {
             <div class="food-items">
                 <div class="item">
                     <div>
+                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/gulai.jpg?updatedAt=1720661904915" alt="Gulai Kentang Udang Pedas">
+                    </div>
+                    <h3>Gulai Kentang Udang Pedas</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, reiciendis?</p>
+                    <a href="resep_makanan.html?id=gulai"><button class="btn_menu">Lihat Resep</button></a>
+                </div>
+                <div class="item">
+                    <div>
                         <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/item1.jpg?updatedAt=1720620379610" alt="food item">
                     </div>
                     <h3>Ceker Mercon</h3>
                     <p>Ceker ayam dengan bumbu pedas yang menggugah selera, sempurna untuk pecinta makanan pedas!</p>
-                    <i class="fa-solid fa-star" style="color: #DAA520;"></i>
-                    <p class="item-rating">(5.0)</p>
                     <button class="btn_menu">Lihat Resep</button>
                 </div>
                 <div class="item">
                     <div>
-                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/item2.jpg?updatedAt=1720620382852" alt="food item">
+                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/soto.jpeg?updatedAt=1720661904627" alt="Soto Ayam">
                     </div>
-                    <h3>Siomay Ikan Bandung</h3>
-                    <p>Siomay ikan khas Bandung yang lembut dengan saus kacang yang kaya rasa.</p>
-                    <button class="btn_menu">Lihat Resep</button>
+                    <h3>Soto Ayam</h3>
+                    <p>Soto ayam yang segar dengan bumbu yang kaya rasa.</p>
+                    <a href="resep_makanan.html?id=soto"><button class="btn_menu">Lihat Resep</button></a>
                 </div>
                 <div class="item">
                     <div>
@@ -244,19 +253,19 @@ if (isset($_GET['user_id']) && !empty($_GET['user_id'])) {
                 </div>
                 <div class="item">
                     <div>
-                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/item5.jpg?updatedAt=1720620383220" alt="food item">
+                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/rendang.jpeg?updatedAt=1720661904877" alt="Rendang">
                     </div>
-                    <h3>Tumis Cumi Sambal Ijo</h3>
+                    <h3>Rendang</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, consequuntur cumque animi enim exercitationem mollitia?</p>
-                    <button class="btn_menu">Lihat Resep</button>
+                    <a href="resep_makanan.html?id=rendang"><button class="btn_menu">Lihat Resep</button></a>
                 </div>
                 <div class="item">
                     <div>
-                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/item6.jpg?updatedAt=1720620383276" alt="food item">
+                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/ayambakar.jpeg?updatedAt=1720661904858" alt="Ayam Bakar">
                     </div>
-                    <h3>Tempe Orek</h3>
+                    <h3>Ayam Bakar</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat sunt vero tempore commodi dolor beatae.</p>
-                    <button class="btn_menu">Lihat Resep</button>
+                    <a href="resep_makanan.html?id=ayambakar"><button class="btn_menu">Lihat Resep</button></a>
                 </div>
                 <div class="item">
                     <div>
@@ -268,14 +277,14 @@ if (isset($_GET['user_id']) && !empty($_GET['user_id'])) {
                 </div>
                 <div class="item">
                     <div>
-                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/item8.jpg?updatedAt=1720620383613" alt="food item">
+                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/pecel.jpeg?updatedAt=1720661904978" alt="Pecel">
                     </div>
-                    <h3>Silk Pudding Brown Sugar ala Gyukaku</h3>
+                    <h3>Pecel</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat sunt vero tempore commodi dolor beatae.</p>
-                    <button class="btn_menu">Lihat Resep</button>
+                    <a href="resep_makanan.html?id=pecel"><button class="btn_menu">Lihat Resep</button></a>
                 </div>
             </div>
-            <button class="btn_show_more" id="goToKuliner">Show More <i class="fa-solid fa-arrow-right-long"></i></button>
+            <a href="resep.html"><button class="btn_show_more">Show More <i class="fa-solid fa-arrow-right-long"></i></button></a>
             <div class="dsgn"></div>
         </div>
 

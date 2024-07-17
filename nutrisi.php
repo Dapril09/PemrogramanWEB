@@ -1,35 +1,3 @@
-<?php
-// Buat koneksi ke database
-$conn = mysqli_connect("localhost", "root", "", "webmakanan");
-
-// Cek apakah koneksi berhasil
-if (!$conn) {
-    die("Koneksi gagal: " . mysqli_connect_error());
-}
-
-// Mulai sesi
-session_start();
-
-// Cek apakah 'user_id' ada di URL dan tidak kosong
-if (isset($_GET['user_id']) && !empty($_GET['user_id'])) {
-    $user_id = mysqli_real_escape_string($conn, $_GET['user_id']); // Pastikan untuk mengamankan nilai input
-
-    // Query yang benar untuk mengambil data pengguna
-    $query = "SELECT * FROM Login WHERE Username='$user_id'";
-    $result = mysqli_query($conn, $query);
-
-    if ($result) {
-        $mhs = mysqli_fetch_assoc($result);
-        $username = $mhs["Username"];
-    } else {
-        echo "Error: " . $query . "<br>" . mysqli_error($conn);
-    }
-} else {
-    echo "User ID tidak ditemukan di URL atau kosong.";
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="id-ID">
 <head>
@@ -67,28 +35,28 @@ if (isset($_GET['user_id']) && !empty($_GET['user_id'])) {
                         </a>
                     </ul>
                 </div>
-            <div class="nav">
+                <div class="nav">
                     <ul>
-                        <a href="resep2.php?user_id=<?php echo $user_id; ?>">
+                        <a href="resep.html">
                             <li>Resep</li>
                         </a>
-                        <a href="bahan2.php?user_id=<?php echo $user_id; ?>">
+                        <a href="bahan.php">
                             <li>Bahan</li>
                         </a>
-                        <a href="nutrisi2.php?user_id=<?php echo $user_id; ?>">
+                        <a href="nutrisi.php">
                             <li>Nutrisi</li>
                         </a>
-                        <a href="unggah_resep.php?user_id=<?php echo $user_id; ?>">
+                        <a href="login.php">
                             <li>Unggah Resep</li>
                         </a>
-                        <a href="index2.php #about">
+                        <a href="index.html #about">
                             <li>About Us</li>
                         </a>
                     </ul>
                 </div>
             </div>
             <div class="logo">
-                <a href="index2.php?user_id=<?php echo $user_id; ?>">Cookie<span>Rookie.</span></a>
+                <a href="index.html">Cookie<span>Rookie.</span></a>
             </div>
             <div class="bar">
                 <i class="fa-solid fa-bars"></i>
@@ -96,19 +64,19 @@ if (isset($_GET['user_id']) && !empty($_GET['user_id'])) {
             </div>
             <div class="nav">
                 <ul>
-                    <a href="resep2.php?user_id=<?php echo $user_id; ?>">
+                    <a href="resep.html">
                         <li>Resep</li>
                     </a>
-                    <a href="bahan2.php?user_id=<?php echo $user_id; ?>">
+                    <a href="bahan.php">
                         <li>Bahan</li>
                     </a>
-                    <a href="nutrisi2.php?user_id=<?php echo $user_id; ?>">
+                    <a href="nutrisi.php">
                         <li>Nutrisi</li>
                     </a>
-                    <a href="unggah_resep.php?user_id=<?php echo $user_id; ?>">
+                    <a href="login.php">
                         <li>Unggah Resep</li>
                     </a>
-                    <a href="index2.php #about">
+                    <a href="index.html #about">
                         <li>About Us</li>
                     </a>
                 </ul>
@@ -157,7 +125,7 @@ if (isset($_GET['user_id']) && !empty($_GET['user_id'])) {
                     <div class="recipe-info">
                         <h3>Brokoli</h3>
                         <p>Deskripsi singkat Brokoli.</p>
-                        <button>Lihat Detail</button>
+                        <a href="detail_nutrisi.php?id=brokoli"><button>Lihat Detail</button></a>
                     </div>
                 </div>
                 <div class="recipe-card">

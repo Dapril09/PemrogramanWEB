@@ -199,97 +199,7 @@
             const recipeId = params.get('id');
 
             const recipes = {
-                'soto': {
-                    title: 'Soto Ayam',
-                    image: 'https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/soto.jpeg?updatedAt=1720661904627',
-                    description: `
-                        <h2>Bahan-Bahan:</h2>
-                        <ul>
-                            <li>1 ekor ayam</li>
-                            <li>2 liter air</li>
-                            <li>4 lembar daun jeruk</li>
-                            <li>2 batang serai</li>
-                            <li>2 cm lengkuas</li>
-                            <li>2 cm jahe</li>
-                            <li>3 siung bawang putih</li>
-                            <li>5 siung bawang merah</li>
-                            <li>1 sdt merica</li>
-                            <li>Garam secukupnya</li>
-                            <li>Minyak untuk menumis</li>
-                        </ul>
-                    `,
-                    steps: `
-                        <h3>Cara Memasak:</h3>
-                        <ol>
-                            <li>Rebus ayam hingga matang, angkat dan suwir-suwir dagingnya.</li>
-                            <li>Tumis bumbu halus hingga harum, masukkan daun jeruk, serai, lengkuas, dan jahe.</li>
-                            <li>Masukkan ayam suwir ke dalam tumisan, aduk rata.</li>
-                            <li>Tuang air kaldu ayam, masak hingga mendidih.</li>
-                            <li>Sajikan soto dengan pelengkap seperti telur rebus, kentang, dan daun seledri.</li>
-                        </ol>
-                    `
-                },
 
-                'Rendang': {
-                    title: 'Rendang Daging',
-                    image: 'https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/rendang.jpeg?updatedAt=1720661904877',
-                    description: `
-                        <h2>Bahan-Bahan:</h2>
-                        <ul>
-                            <li>1 kg daging sapi</li>
-                            <li>2 liter santan</li>
-                            <li>4 lembar daun salam</li>
-                            <li>4 lembar daun jeruk</li>
-                            <li>2 batang serai</li>
-                            <li>2 cm lengkuas</li>
-                            <li>2 cm jahe</li>
-                            <li>5 siung bawang putih</li>
-                            <li>10 siung bawang merah</li>
-                            <li>1 sdm ketumbar</li>
-                            <li>1 sdm garam</li>
-                            <li>1 sdm gula merah</li>
-                        </ul>
-                    `,
-                    steps: `
-                        <h3>Cara Memasak:</h3>
-                        <ol>
-                            <li>Potong daging sapi sesuai selera.</li>
-                            <li>Tumis bumbu halus hingga harum, masukkan daun salam, daun jeruk, serai, lengkuas, dan jahe.</li>
-                            <li>Masukkan daging, aduk hingga berubah warna.</li>
-                            <li>Tuangkan santan, masak dengan api kecil sambil terus diaduk hingga santan mengental dan daging empuk.</li>
-                            <li>Angkat dan sajikan.</li>
-                        </ol>
-                    `
-                },
-                'Nasigoreng': {
-                    title: 'Nasi Goreng',
-                    image: 'https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/nasigoreng.jpeg?updatedAt=1720661904848',
-                    description: `
-                        <h2>Bahan-Bahan:</h2>
-                        <ul>
-                            <li>2 piring nasi</li>
-                            <li>2 butir telur</li>
-                            <li>100 gr ayam fillet</li>
-                            <li>3 siung bawang putih</li>
-                            <li>2 siung bawang merah</li>
-                            <li>2 sdm kecap manis</li>
-                            <li>1 sdt garam</li>
-                            <li>1 sdt merica</li>
-                            <li>Minyak untuk menumis</li>
-                        </ul>
-                    `,
-                    steps: `
-                        <h3>Cara Memasak:</h3>
-                        <ol>
-                            <li>Tumis bawang putih dan bawang merah hingga harum.</li>
-                            <li>Masukkan ayam fillet, masak hingga matang.</li>
-                            <li>Tambahkan telur, aduk hingga berbentuk orak-arik.</li>
-                            <li>Masukkan nasi, kecap manis, garam, dan merica.</li>
-                            <li>Aduk rata dan masak hingga semua bahan tercampur sempurna.</li>
-                            <li>Angkat dan sajikan.</li>
-                        </ol>
-                    `
-                },
                 'gulai': {
                     title: 'Gulai Kentang Udang Pedas',
                     image: 'https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/gulai.jpg?updatedAt=1720661904915',
@@ -324,43 +234,245 @@
                         </ol>
                     `
                 },
+                'soto': {
+                    title: 'Soto Ayam',
+                    image: 'https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/soto.jpeg?updatedAt=1720661904627',
+                    description: `
+                        <h2>Bahan-Bahan:</h2>
+                        <ul>
+                            <li>1 ekor ayam</li>
+                            <li>2 liter air</li>
+                            <li>4 lembar daun jeruk</li>
+                            <li>2 batang serai</li>
+                            <li>2 cm lengkuas</li>
+                            <li>2 cm jahe</li>
+                            <li>3 siung bawang putih</li>
+                            <li>5 siung bawang merah</li>
+                            <li>1 sdt merica</li>
+                            <li>Garam secukupnya</li>
+                            <li>Minyak untuk menumis</li>
+                        </ul>
+                    `,
+                    steps: `
+                        <h3>Cara Memasak:</h3>
+                        <ol>
+                            <li>Rebus ayam hingga matang, angkat dan suwir-suwir dagingnya.</li>
+                            <li>Haluskan bawang putih, bawang merah, merica, jahe, dan lengkuas.</li>
+                            <li>Tumis bumbu halus bersama daun jeruk dan serai hingga harum.</li>
+                            <li>Masukkan bumbu tumis ke dalam air kaldu ayam, aduk rata.</li>
+                            <li>Masukkan ayam suwir, masak hingga bumbu meresap.</li>
+                            <li>Tambahkan garam secukupnya.</li>
+                            <li>Sajikan soto ayam dengan pelengkap seperti nasi, irisan daun bawang, seledri, dan bawang goreng.</li>
+                        </ol>
+                    `
+                },
+                'rendang': {
+                    title: 'Rendang Daging',
+                    image: 'https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/rendang.jpeg?updatedAt=1720661904877',
+                    description: `
+                        <h2>Bahan-Bahan:</h2>
+                        <ul>
+                            <li>1 kg daging sapi</li>
+                            <li>2 liter santan</li>
+                            <li>4 lembar daun jeruk</li>
+                            <li>2 batang serai</li>
+                            <li>2 cm lengkuas</li>
+                            <li>2 cm jahe</li>
+                            <li>10 buah cabai merah besar</li>
+                            <li>5 siung bawang putih</li>
+                            <li>8 siung bawang merah</li>
+                            <li>2 sdt ketumbar</li>
+                            <li>Garam secukupnya</li>
+                            <li>Minyak untuk menumis</li>
+                        </ul>
+                    `,
+                    steps: `
+                        <h3>Cara Memasak:</h3>
+                        <ol>
+                            <li>Potong-potong daging sapi sesuai selera.</li>
+                            <li>Haluskan cabai merah, bawang putih, bawang merah, ketumbar, jahe, dan lengkuas.</li>
+                            <li>Tumis bumbu halus bersama daun jeruk dan serai hingga harum.</li>
+                            <li>Masukkan potongan daging, aduk hingga daging berubah warna.</li>
+                            <li>Tuangkan santan, masak dengan api kecil hingga santan mengental dan bumbu meresap.</li>
+                            <li>Tambahkan garam secukupnya, masak hingga daging empuk dan kuah mengering.</li>
+                            <li>Sajikan rendang daging dengan nasi hangat.</li>
+                        </ol>
+                    `
+                },
+                'nasigoreng': {
+                    title: 'Nasi Goreng',
+                    image: 'https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/nasigoreng.jpeg?updatedAt=1720661904848',
+                    description: `
+                        <h2>Bahan-Bahan:</h2>
+                        <ul>
+                            <li>2 piring nasi putih</li>
+                            <li>2 siung bawang putih</li>
+                            <li>3 siung bawang merah</li>
+                            <li>2 butir telur</li>
+                            <li>2 sdm kecap manis</li>
+                            <li>1 sdm saus tiram</li>
+                            <li>Garam dan merica secukupnya</li>
+                            <li>Minyak untuk menumis</li>
+                            <li>Sayuran dan daging sesuai selera</li>
+                        </ul>
+                    `,
+                    steps: `
+                        <h3>Cara Memasak:</h3>
+                        <ol>
+                            <li>Haluskan bawang putih dan bawang merah.</li>
+                            <li>Tumis bumbu halus hingga harum.</li>
+                            <li>Masukkan telur, orak-arik hingga matang.</li>
+                            <li>Tambahkan sayuran dan daging, tumis hingga matang.</li>
+                            <li>Masukkan nasi putih, aduk rata.</li>
+                            <li>Tambahkan kecap manis, saus tiram, garam, dan merica, aduk hingga bumbu merata.</li>
+                            <li>Sajikan nasi goreng dengan pelengkap seperti acar dan kerupuk.</li>
+                        </ol>
+                    `
+                },
                 'miegoreng': {
                     title: 'Mie Goreng',
                     image: 'https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/mie.jpeg?updatedAt=1720661904686',
                     description: `
-                    <div class="food-description">
                         <h2>Bahan-Bahan:</h2>
-                        <ul clas>
-                            <li>200 gr mie telur</li>
-                            <li>100 gr daging ayam</li>
+                        <ul>
+                            <li>200 gram mie telur</li>
                             <li>2 siung bawang putih</li>
                             <li>3 siung bawang merah</li>
+                            <li>2 butir telur</li>
                             <li>2 sdm kecap manis</li>
                             <li>1 sdm saus tiram</li>
-                            <li>1 sdt garam</li>
-                            <li>1 sdt merica</li>
-                            <li>2 butir telur</li>
-                            <li>2 batang daun bawang</li>
+                            <li>Garam dan merica secukupnya</li>
                             <li>Minyak untuk menumis</li>
+                            <li>Sayuran dan daging sesuai selera</li>
                         </ul>
-                        
                     `,
                     steps: `
                         <h3>Cara Memasak:</h3>
                         <ol>
                             <li>Rebus mie hingga matang, tiriskan.</li>
-                            <li>Tumis bawang putih dan bawang merah hingga harum.</li>
-                            <li>Masukkan daging ayam, masak hingga berubah warna.</li>
-                            <li>Tambahkan telur, buat orak-arik.</li>
-                            <li>Masukkan mie, kecap manis, saus tiram, garam, dan merica.</li>
-                            <li>Aduk rata dan masak hingga semua bahan tercampur sempurna.</li>
-                            <li>Tambahkan daun bawang, aduk sebentar dan angkat.</li>
+                            <li>Haluskan bawang putih dan bawang merah.</li>
+                            <li>Tumis bumbu halus hingga harum.</li>
+                            <li>Masukkan telur, orak-arik hingga matang.</li>
+                            <li>Tambahkan sayuran dan daging, tumis hingga matang.</li>
+                            <li>Masukkan mie, aduk rata.</li>
+                            <li>Tambahkan kecap manis, saus tiram, garam, dan merica, aduk hingga bumbu merata.</li>
+                            <li>Sajikan mie goreng dengan pelengkap seperti acar dan kerupuk.</li>
+                        </ol>
+                    `
+                },
+                'ayambakar': {
+                    title: 'Ayam Bakar',
+                    image: 'https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/ayambakar.jpeg?updatedAt=1720661904858',
+                    description: `
+                        <h2>Bahan-Bahan:</h2>
+                        <ul>
+                            <li>1 ekor ayam, potong-potong</li>
+                            <li>3 siung bawang putih</li>
+                            <li>5 siung bawang merah</li>
+                            <li>2 cm lengkuas</li>
+                            <li>2 cm jahe</li>
+                            <li>3 sdm kecap manis</li>
+                            <li>2 sdm saus tomat</li>
+                            <li>Garam dan merica secukupnya</li>
+                            <li>Minyak untuk menumis</li>
+                        </ul>
+                    `,
+                    steps: `
+                        <h3>Cara Memasak:</h3>
+                        <ol>
+                            <li>Haluskan bawang putih, bawang merah, lengkuas, dan jahe.</li>
+                            <li>Tumis bumbu halus hingga harum.</li>
+                            <li>Masukkan potongan ayam, aduk hingga ayam berubah warna.</li>
+                            <li>Tambahkan kecap manis, saus tomat, garam, dan merica, aduk rata.</li>
+                            <li>Panggang ayam di atas bara api hingga matang dan berwarna kecokelatan.</li>
+                            <li>Sajikan ayam bakar dengan nasi hangat dan sambal.</li>
+                        </ol>
+                    `
+                },
+                'pecel': {
+                    title: 'Pecel',
+                    image: 'https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/pecel.jpeg?updatedAt=1720661904978',
+                    description: `
+                        <h2>Bahan-Bahan:</h2>
+                        <ul>
+                            <li>200 gram kacang tanah, goreng</li>
+                            <li>3 siung bawang putih</li>
+                            <li>5 buah cabai merah</li>
+                            <li>2 lembar daun jeruk</li>
+                            <li>Garam dan gula secukupnya</li>
+                            <li>Air secukupnya</li>
+                            <li>Sayuran sesuai selera (kangkung, tauge, kol, dll.)</li>
+                        </ul>
+                    `,
+                    steps: `
+                        <h3>Cara Memasak:</h3>
+                        <ol>
+                            <li>Haluskan kacang tanah, bawang putih, cabai merah, daun jeruk, garam, dan gula.</li>
+                            <li>Tambahkan air sedikit demi sedikit hingga mencapai kekentalan yang diinginkan.</li>
+                            <li>Rebus sayuran hingga matang, tiriskan.</li>
+                            <li>Sajikan sayuran dengan bumbu pecel.</li>
+                        </ol>
+                    `
+                },
+                'gadogado': {
+                    title: 'Gado-Gado',
+                    image: 'https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/gadogado.jpeg?updatedAt=1720661904606',
+                    description: `
+                        <h2>Bahan-Bahan:</h2>
+                        <ul>
+                            <li>200 gram kacang tanah, goreng</li>
+                            <li>3 siung bawang putih</li>
+                            <li>5 buah cabai merah</li>
+                            <li>2 lembar daun jeruk</li>
+                            <li>Garam dan gula secukupnya</li>
+                            <li>Air secukupnya</li>
+                            <li>Sayuran sesuai selera (kentang, tauge, kol, dll.)</li>
+                            <li>Telur rebus</li>
+                            <li>Tempe dan tahu goreng</li>
+                        </ul>
+                    `,
+                    steps: `
+                        <h3>Cara Memasak:</h3>
+                        <ol>
+                            <li>Haluskan kacang tanah, bawang putih, cabai merah, daun jeruk, garam, dan gula.</li>
+                            <li>Tambahkan air sedikit demi sedikit hingga mencapai kekentalan yang diinginkan.</li>
+                            <li>Rebus sayuran hingga matang, tiriskan.</li>
+                            <li>Sajikan sayuran, telur rebus, tempe, dan tahu dengan bumbu gado-gado.</li>
+                        </ol>
+                    `
+                },
+                'sayurlodeh': {
+                    title: 'Sayur Lodeh',
+                    image: 'https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/sayurlodeh.jpeg?updatedAt=1720661904826',
+                    description: `
+                        <h2>Bahan-Bahan:</h2>
+                        <ul>
+                            <li>200 gram labu siam, potong-potong</li>
+                            <li>100 gram kacang panjang, potong-potong</li>
+                            <li>100 gram jagung manis, potong-potong</li>
+                            <li>200 ml santan</li>
+                            <li>3 siung bawang putih</li>
+                            <li>5 siung bawang merah</li>
+                            <li>2 buah cabai merah</li>
+                            <li>2 lembar daun salam</li>
+                            <li>2 cm lengkuas</li>
+                            <li>Garam dan gula secukupnya</li>
+                            <li>Air secukupnya</li>
+                        </ul>
+                    `,
+                    steps: `
+                        <h3>Cara Memasak:</h3>
+                        <ol>
+                            <li>Haluskan bawang putih, bawang merah, dan cabai merah.</li>
+                            <li>Tumis bumbu halus bersama daun salam dan lengkuas hingga harum.</li>
+                            <li>Masukkan labu siam, kacang panjang, dan jagung manis, aduk rata.</li>
+                            <li>Tambahkan air, masak hingga sayuran setengah matang.</li>
+                            <li>Tuangkan santan, masak hingga sayuran matang dan kuah mendidih.</li>
+                            <li>Tambahkan garam dan gula secukupnya, aduk rata.</li>
+                            <li>Sajikan sayur lodeh dengan nasi hangat.</li>
                         </ol>
                     `
                 }
-
-
-
             };
 
             const recipe = recipes[recipeId];
