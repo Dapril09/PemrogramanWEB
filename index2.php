@@ -146,22 +146,20 @@ if (isset($_GET['user_id']) && !empty($_GET['user_id'])) {
             <div>
                 <h1>Enjoy <span>Destination Food</span> in Your Happy Life</h1>
                 <p>Temukan destinasi kuliner terbaik untuk kebahagiaan hidupmu. Bergabunglah dengan kami dan nikmati beragam cita rasa dari berbagai penjuru dunia!</p>
+                <a href="login.php"><button class="btn_green">Join With Us <i class="fa-solid fa-arrow-right-long"></i></button></a>
             </div>
             <div>
                 <img src="food_header.gif" alt="">
             </div>
         </div>
 
-        <div class="head-materials">
-            <div>
-                <h2>Pilih Bahan Masakan yang Kamu Punya</h2>
-                <p>Tidak perlu bingung dan khawatir lagi mau masak. Tinggal cari bahannya dan dapatkan inspirasi resepnya!</p>
-            </div>
-        </div>
-
         <div class="materials-list-container">
             <button class="scroll-button left"><i class="fa-solid fa-chevron-left"></i></button>
             <div class="materials-list">
+                <div>
+                    <h2>Pilih Bahan Masakan yang Kamu Punya</h2>
+                    <p>Tidak perlu bingung dan khawatir lagi mau masak. Tinggal cari bahannya dan dapatkan inspirasi resepnya!</p>
+                </div>
                 <div class="list">
                     <div>
                         <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/list1.png?updatedAt=1720620384247" alt="material list">
@@ -185,15 +183,10 @@ if (isset($_GET['user_id']) && !empty($_GET['user_id'])) {
                         <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/list4.png?updatedAt=1720620380182" alt="material list">
                     </div>
                     <h3>Ikan</h3>
-                    <div class="list">
-                    <div>
-                        <img src=https://ik.imagekit.io/zxcxbyi4h/Materials_List/list5.jpg?updatedAt=1721147434302 alt="material list">
-                    </div>
-                    <h3>Cumi</h3>
                 </div>
-                </div>
+                <!-- Tambahkan lebih banyak item jika diperlukan -->
             </div>
-            <a href="bahan.php"><button class="scroll-button right"><i class="fa-solid fa-chevron-right"></i></button></a>
+            <button class="scroll-button right"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
         
         <div class="home2">
@@ -212,88 +205,74 @@ if (isset($_GET['user_id']) && !empty($_GET['user_id'])) {
         <div class="home3">
             <div class="food-head">
                 <h3>Our Popular Food Items</h3>
-                <p>Temukan hidangan lezat kami, yang dibuat dengan cinta dan ketelitian. Nikmati cita rasa yang kaya dan resep unik yang telah menjadikan kami favorit di kalangan pecinta kuliner. Apapun yang Anda idamkan, manis atau gurih, menu kami memiliki sesuatu untuk memuaskan setiap selera.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis cum odio quas facilis molestias omnis officiis? Veniam, corporis quae! Voluptatibus eum rem aliquam vitae, sit perferendis praesentium veritatis ut fugit.</p>
             </div>
             <div class="food-items">
                 <div class="item">
                     <div>
-                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/rendang.jpeg?updatedAt=1720661904877" alt="Rendang Daging">
-                    </div>
-                    <h3>Rendang Daging</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, reiciendis?</p>
-                    <a href="resep_makanan.html?id=rendang"><button class="btn_menu">Lihat Resep</button></a>
-                </div>
-                <div class="item">
-                    <div>
-                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/gulai.jpg?updatedAt=1720661904915" alt="Gulai Kentang Udang Pedas">
-                    </div>
-                    <h3>Gulai Kentang Udang Pedas</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, reiciendis?</p>
-                    <a href="resep_makanan.html?id=gulai"><button class="btn_menu">Lihat Resep</button></a>
-                </div>
-                <div class="item">
-                    <div>
-                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/ayambakar.jpeg?updatedAt=1720661904858" alt="Ayam Bakar">
-                    </div>
-                    <h3>Ayam Bakar</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, reiciendis?</p>
-                    <a href="resep_makanan.html?id=ayambakar"><button class="btn_menu">Lihat Resep</button></a>
-                </div>
-                <div class="item">
-                    <div>
-                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/item1.jpg?updatedAt=1720620379610" alt="Ceker Mercon">
+                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/item1.jpg?updatedAt=1720620379610" alt="food item">
                     </div>
                     <h3>Ceker Mercon</h3>
                     <p>Ceker ayam dengan bumbu pedas yang menggugah selera, sempurna untuk pecinta makanan pedas!</p>
-                    <a href="resep_makanan.html?id=cekermercon"><button class="btn_menu">Lihat Resep</button></a>
+                    <i class="fa-solid fa-star" style="color: #DAA520;"></i>
+                    <p class="item-rating">(5.0)</p>
+                    <button class="btn_menu">Lihat Resep</button>
                 </div>
                 <div class="item">
                     <div>
-                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/item3.jpg?updatedAt=1720620382867" alt="Roti Ubi Ungu">
+                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/item2.jpg?updatedAt=1720620382852" alt="food item">
+                    </div>
+                    <h3>Siomay Ikan Bandung</h3>
+                    <p>Siomay ikan khas Bandung yang lembut dengan saus kacang yang kaya rasa.</p>
+                    <button class="btn_menu">Lihat Resep</button>
+                </div>
+                <div class="item">
+                    <div>
+                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/item3.jpg?updatedAt=1720620382867" alt="food item">
                     </div>
                     <h3>Roti Ubi Ungu Manis</h3>
                     <p>Roti lembut dengan isian ubi ungu yang manis, ideal untuk camilan atau sarapan.</p>
-                    <a href="resep_makanan.html?id=rotiubi"><button class="btn_menu">Lihat Resep</button></a>
+                    <button class="btn_menu">Lihat Resep</button>
                 </div>
                 <div class="item">
                     <div>
-                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/item4.jpg?updatedAt=1720620383577" alt="Telur Balado">
+                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/item4.jpg?updatedAt=1720620383577" alt="food item">
                     </div>
                     <h3>Telur Balado</h3>
                     <p>Telur dengan saus balado pedas yang gurih dan nikmat, cocok untuk pelengkap makan siang atau malam.</p>
-                    <a href="resep_makanan.html?id=telurbalado"><button class="btn_menu">Lihat Resep</button></a>
+                    <button class="btn_menu">Lihat Resep</button>
                 </div>
                 <div class="item">
                     <div>
-                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/resep_makanan/mie.jpeg?updatedAt=1720661904686" alt="Mie Goreng">
-                    </div>
-                    <h3>Mie Goreng</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, reiciendis?</p>
-                    <a href="resep_makanan.html?id=miegoreng"><button class="btn_menu">Lihat Resep</button></a>
-                </div>
-                <div class="item">
-                    <div>
-                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/item5.jpg?updatedAt=1720620383220" alt="Tumis Cumi">
+                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/item5.jpg?updatedAt=1720620383220" alt="food item">
                     </div>
                     <h3>Tumis Cumi Sambal Ijo</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, consequuntur cumque animi enim exercitationem mollitia?</p>
-                    <a href="resep_makanan.html?id=tumiscumi"><button class="btn_menu">Lihat Resep</button></a>
+                    <button class="btn_menu">Lihat Resep</button>
                 </div>
                 <div class="item">
                     <div>
-                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/item7.jpg?updatedAt=1720620383521" alt="Cucumber Salad">
+                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/item6.jpg?updatedAt=1720620383276" alt="food item">
+                    </div>
+                    <h3>Tempe Orek</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat sunt vero tempore commodi dolor beatae.</p>
+                    <button class="btn_menu">Lihat Resep</button>
+                </div>
+                <div class="item">
+                    <div>
+                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/item7.jpg?updatedAt=1720620383521" alt="food item">
                     </div>
                     <h3>Cucumber Salad</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat sunt vero tempore commodi dolor beatae.</p>
-                    <a href="resep_makanan.html?id=cucumbersalad"><button class="btn_menu">Lihat Resep</button></a>
+                    <button class="btn_menu">Lihat Resep</button>
                 </div>
                 <div class="item">
                     <div>
-                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/item8.jpg?updatedAt=1720620383613" alt="Silk Pudding">
+                        <img src="https://ik.imagekit.io/mggpv7ahk/Pemrograman_WEB/Beranda/item8.jpg?updatedAt=1720620383613" alt="food item">
                     </div>
                     <h3>Silk Pudding Brown Sugar ala Gyukaku</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat sunt vero tempore commodi dolor beatae.</p>
-                    <a href="resep_makanan.html?id=pudding"><button class="btn_menu">Lihat Resep</button></a>
+                    <button class="btn_menu">Lihat Resep</button>
                 </div>
             </div>
             <button class="btn_show_more" id="goToKuliner">Show More <i class="fa-solid fa-arrow-right-long"></i></button>

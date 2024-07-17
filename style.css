@@ -170,25 +170,6 @@
     color: #40A578;
 }
 
-.head-materials{
-    margin: 70px 0;
-    text-align: center;
-    flex: 0.5;
-    flex-direction: column;
-    margin-left: 5px;
-}
-
-.head-materials h2{
-    font-size: 30px;
-    color: #FE7A36;
-    margin-bottom: 15px;
-}
-
-.head-materials p {
-    font-size: 16px;
-    color: #40A578;
-}
-
 .materials-list-container {
     margin: 70px 0;
     padding: 20px 0;
@@ -209,6 +190,23 @@
     padding: 20px 0;
     flex: 1;
     white-space: nowrap;
+}
+
+.head-materials{
+    flex: 0.5;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+.head-materials h2{
+    font-size: 30px;
+    color: #FE7A36;
+    margin-bottom: 15px;
+}
+
+.head-materials p {
+    font-size: 16px;
+    color: #40A578;
 }
 
 .list{
