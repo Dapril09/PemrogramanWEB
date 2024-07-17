@@ -180,7 +180,8 @@ if (isset($_GET['user_id']) && !empty($_GET['user_id'])) {
                         ["src" => "https://ik.imagekit.io/whks7rzkc/anggur.jpeg?updatedAt=1720763777154", "alt" => "Anggur", "value" => "Anggur"],
                         ["src" => "https://ik.imagekit.io/whks7rzkc/apel.jpeg?updatedAt=1720763776879", "alt" => "Apel", "value" => "Apel"],
                         ["src" => "https://ik.imagekit.io/whks7rzkc/almon.jpeg?updatedAt=1720763777198", "alt" => "Almon", "value" => "Almon"],
-                        ["src" => "https://ik.imagekit.io/whks7rzkc/Ampela?updatedAt=1721148340652", "alt" => "Ampela", "value" => "Ampela"]
+                        ["src" => "https://ik.imagekit.io/whks7rzkc/Ampela?updatedAt=1721148340652", "alt" => "Ampela", "value" => "Ampela"],
+                        ["src" => "https://ik.imagekit.io/whks7rzkc/Asam%20Jawa.jpeg?updatedAt=1721190002365", "alt" => "Asam Jawa", "value" => "Asam Jawa"]
                     ];
 
                     foreach ($otherIngredientsA as $ingredient) {

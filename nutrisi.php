@@ -133,7 +133,7 @@
                     <div class="recipe-info">
                         <h3>Asparagus</h3>
                         <p>Deskripsi singkat Asparagus.</p>
-                        <button>Lihat Detail</button>
+                        <a href="detail_nutrisi.php?id=brokoli"><button>Lihat Detail</button></a>
                     </div>
                 </div>
                 <div class="recipe-card">
@@ -141,7 +141,7 @@
                     <div class="recipe-info">
                         <h3>Sawi hijau</h3>
                         <p>Deskripsi singkat Sawi hijau.</p>
-                        <button>Lihat Detail</button>
+                        <a href="detail_nutrisi.php?id=brokoli"><button>Lihat Detail</button></a>
                     </div>
                 </div>
                 <div class="recipe-card">

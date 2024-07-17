@@ -270,7 +270,7 @@ if (isset($_GET['user_id']) && !empty($_GET['user_id'])) {
                 <h2>Contact</h2>
                 <p>+62 896-3056-1413</p>
                 <p>+62 812-2704-8289</p>
-                <p>dhewiaprilliana@gmail.com</p>
+                <p>dhewiapriliana@gmail.com</p>
                 <p>indawatilatif@gmail.com</p>
                 <p>auraamylia7@gmail.com</p>
                 <p>elsanadiyah24@gmail.com</p>
@@ -289,7 +289,7 @@ if (isset($_GET['user_id']) && !empty($_GET['user_id'])) {
                 <i class="fa-brands fa-linkedin-in"></i>
             </div>
         </div>
-        <p class="end">&copy; 2024 - Design by<span><i class="fa-solid fa-face-grin"></i> Project Design Website Food</span></p>
+        <p class="end">&copy; 2024-Design by<span><i class="fa-solid fa-face-grin"></i> Project Design Website Food</span></p>
     </footer>
 </body>
 </html>
